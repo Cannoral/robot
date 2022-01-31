@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SandboxController;
+use App\Http\Controllers\TickerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 Route::get('/sandbox', [SandboxController::class, 'index'])->middleware(['auth'])->name('sandbox.index');
+
+Route::get('/tickers', [TickerController::class, 'index'])->middleware(['auth'])->name('tickers.index');
 
 require __DIR__.'/auth.php';

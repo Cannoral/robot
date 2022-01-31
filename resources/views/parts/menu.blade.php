@@ -10,6 +10,9 @@
       <li class="nav-item">
         <a class="nav-link" href="#">Live</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link @if (request()->route()->getName() == 'tickers.index') active @endif" href="{{ route('tickers.index') }}">Tickers (MOEX)</a>
+      </li>
     </ul>
   </div>
 </div>
